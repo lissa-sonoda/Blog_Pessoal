@@ -2,6 +2,8 @@ package br.org.generation.blogpessoal.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -31,7 +33,6 @@ public class PostagemController {
 		return ResponseEntity.ok(repository.findAll()); //ok = stt 200
 	}
 	
-	//getById -> endpoint com a função de trazer uma única postagem a partir do id
 	@GetMapping("/{id}")
 	public ResponseEntity<Postagem> getByIdPostagem(@PathVariable long id){
 		return repository.findById(id)
@@ -39,24 +40,30 @@ public class PostagemController {
 				.orElse(ResponseEntity.notFound().build());
 	}
 	
-	//getByTitulo -> endpoint com a função de trazer uma única postagem por título
 	@GetMapping("/titulo/{titulo}")
 	public ResponseEntity<List<Postagem>> getByTituloPostagem(@PathVariable String titulo){
 		return ResponseEntity.ok(repository.findAllByTituloContainingIgnoreCase(titulo));
 	}
 	
 	@PostMapping
-	public ResponseEntity<Postagem> postPostagem(@RequestBody Postagem postagem){
+	public ResponseEntity<Postagem> postPostagem(@Valid @RequestBody Postagem postagem){
 		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(postagem));
 	}
 	
 	@PutMapping
-	public ResponseEntity<Postagem> putPostagem(@RequestBody Postagem postagem){
-		return ResponseEntity.status(HttpStatus.OK).body(repository.save(postagem));
+	public ResponseEntity<Postagem> putPostagem(@Valid @RequestBody Postagem postagem){
+		return repository.findById(postagem.getIdpost())
+				.map(resposta -> ResponseEntity.ok().body(repository.save(postagem)))
+				.orElse(ResponseEntity.notFound().build());
 	}
 	
 	@DeleteMapping("/{id}")
-	public void deletePostagem(@PathVariable long id) {
-		repository.deleteById(id);
+	public ResponseEntity<?> deletePostagem(@PathVariable long id) {
+		return repository.findById(id)
+				.map(resposta -> {
+					repository.deleteById(id);
+					return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+				})
+				.orElse(ResponseEntity.notFound().build());
 	}
 }

@@ -11,20 +11,19 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@Table(name = "tb_postagens")
+@Table(name = "tb_postagem")
 public class Postagem {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private long idpost;
 	
-	@NotNull(message = "O atributo título é obrigatório")
+	@NotBlank(message = "O atributo título é obrigatório")
 	@Size(min = 5, max = 100, message = "O atributo título deve conter no mínimo 5 e no máximo 100 caracteres")
 	private String titulo;
 	
@@ -38,13 +37,17 @@ public class Postagem {
 	@ManyToOne
 	@JsonIgnoreProperties("postagem")
 	private Tema tema;
+	
+	@ManyToOne
+	@JsonIgnoreProperties("postagem")
+	private Usuario usuario;
 
-	public long getId() {
-		return id;
+	public long getIdpost() {
+		return idpost;
 	}
 
-	public void setId(long id) {
-		this.id = id;
+	public void setIdpost(long idpost) {
+		this.idpost = idpost;
 	}
 
 	public String getTitulo() {
@@ -70,13 +73,21 @@ public class Postagem {
 	public void setData(Date data) {
 		this.data = data;
 	}
-	
+
 	public Tema getTema() {
 		return tema;
 	}
 
 	public void setTema(Tema tema) {
 		this.tema = tema;
+	}
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 
 }

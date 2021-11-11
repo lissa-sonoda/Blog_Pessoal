@@ -9,7 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -20,24 +20,24 @@ public class Tema {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private long idtema;
 	
-	@NotNull
-	@Size(min = 5, max = 100, message = "A descrição é obrigatória, contendo de 5 a 100 caracteres")
+	@NotBlank(message = "A descrição é obrigatória")
+	@Size(min = 2, max = 100, message = "A descrição deve conter entre 5 a 100 caracteres")
 	private String descricao;
 	
 	@OneToMany(mappedBy = "tema", cascade = CascadeType.ALL)
 	@JsonIgnoreProperties("tema")
 	private List<Postagem> postagem;
 	
-	public long getId() {
-		return id;
+	public long getIdtema() {
+		return idtema;
 	}
-	
-	public void setId(long id) {
-		this.id = id;
+
+	public void setIdtema(long idtema) {
+		this.idtema = idtema;
 	}
-	
+
 	public String getDescricao() {
 		return descricao;
 	}
