@@ -2,36 +2,46 @@ package br.org.generation.blogpessoal.model;
 
 public class UserLogin {
 	
-	private String nome;
+	private long idlog;
 	
-	private String usuario;
+	private String namelog;
 	
-	private String senha;
+	private String usernamelog;
+	
+	private String passwordlog;
 	
 	private String token;
 
-	public String getNome() {
-		return nome;
+	public long getIdlog() {
+		return idlog;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setIdlog(long idlog) {
+		this.idlog = idlog;
 	}
 
-	public String getUsuario() {
-		return usuario;
+	public String getNamelog() {
+		return namelog;
 	}
 
-	public void setUsuario(String usuario) {
-		this.usuario = usuario;
+	public void setNamelog(String namelog) {
+		this.namelog = namelog;
 	}
 
-	public String getSenha() {
-		return senha;
+	public String getUsernamelog() {
+		return usernamelog;
 	}
 
-	public void setSenha(String senha) {
-		this.senha = senha;
+	public void setUsernamelog(String usernamelog) {
+		this.usernamelog = usernamelog;
+	}
+
+	public String getPasswordlog() {
+		return passwordlog;
+	}
+
+	public void setPasswordlog(String passwordlog) {
+		this.passwordlog = passwordlog;
 	}
 
 	public String getToken() {

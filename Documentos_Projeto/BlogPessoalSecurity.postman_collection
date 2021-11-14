@@ -1,0 +1,837 @@
+{
+	"info": {
+		"_postman_id": "4c999087-3f2a-4953-88d2-ef0298f2b985",
+		"name": "BlogPessoal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "01 - Users (Usuarios)",
+			"item": [
+				{
+					"name": "Signup User (Cadastrar)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Lissa Sonoda\",\r\n    \"username\": \"Lissa95\",\r\n    \"password\": \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/users/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login User (Acessar)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usernamelog\": \"Lissa95\",\r\n    \"passwordlog\": \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/users/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2E5NToxMjM0NTY3ODk=",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/users/all",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User (Atualizar)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2E5NToxMjM0NTY3ODk=",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"iduser\": 1,\r\n    \"name\": \"Helen Lissa Sonoda\",\r\n    \"username\": \"Lissa950130\",\r\n    \"password\": \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/users/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login User (Acessar) (Atualizado)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usernamelog\": \"Lissa950130\",\r\n    \"passwordlog\": \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/users/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users (Atualizado)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2E5NTAxMzA6MTIzNDU2Nzg5",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/users/all",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "02 - Topics (Temas)",
+			"item": [
+				{
+					"name": "Post Topic 01",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2E5NTAxMzA6MTIzNDU2Nzg5",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Música\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/topics",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"topics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Topic 02",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2E5NTAxMzA6MTIzNDU2Nzg5",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Tecnologia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/topics",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"topics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Topic 03",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2E5NTAxMzA6MTIzNDU2Nzg5",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Tecnologia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/topics",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"topics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Topic 04",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2E5NTAxMzA6MTIzNDU2Nzg5",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Culinária\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/topics",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"topics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Topic 03",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2E5NTAxMzA6MTIzNDU2Nzg5",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idtopic\": 3,\r\n    \"description\": \"Animais de Estimação\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/topics",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"topics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Topics",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2E5NTAxMzA6MTIzNDU2Nzg5",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/topics",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"topics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Id Topic",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2E5NTAxMzA6MTIzNDU2Nzg5",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/topics/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"topics",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Description Topic",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2E5NTAxMzA6MTIzNDU2Nzg5",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/topics/desc/culin",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"topics",
+								"desc",
+								"culin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Topic 01",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2E5NTAxMzA6MTIzNDU2Nzg5",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/topics/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"topics",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Topics",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2E5NTAxMzA6MTIzNDU2Nzg5",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/topics",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"topics"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "03 - Posts (Postagens)",
+			"item": [
+				{
+					"name": "Post Post 01",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2E5NTAxMzA6MTIzNDU2Nzg5",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Aprendendo o Spring\",\r\n    \"text\": \"Utilizando o SpringTool para fazer as atividades de Spring.\",\r\n    \"topic\":{\r\n        \"idtopic\": 2\r\n    },\r\n    \"user\":{\r\n        \"iduser\":1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/posts",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Post 02",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2E5NTAxMzA6MTIzNDU2Nzg5",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Aprendendo o Portugol\",\r\n    \"text\": \"Utilizando o Portugol para fazer as atividades de lógica de programação.\",\r\n    \"topic\":{\r\n        \"idtopic\": 2\r\n    },\r\n    \"user\":{\r\n        \"iduser\":1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/posts",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Post 03",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2E5NTAxMzA6MTIzNDU2Nzg5",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Alimentação de Calopsitas\",\r\n    \"text\": \"Melhores marcas de ração, além de uma lista de verduras e frutas permitidas para complementar a alimentação das calopsitas\",\r\n    \"topic\":{\r\n        \"idtopic\": 3\r\n    },\r\n    \"user\":{\r\n        \"iduser\":1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/posts",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Post 04",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2E5NTAxMzA6MTIzNDU2Nzg5",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Receita de Macarronada\",\r\n    \"text\": \"INGREDIENTES: Espaguete 1 pacote, Patinho 500 gramas, Molho de tomate 2 caixinhas, Alho 1 dente, Cebola 1 unidade, Azeitona verde 2 colheres (sopa), Manjericão 10 folhas, Óleo de soja a gosto, Queijo Ralado a gosto. COMO FAZER: 1. Em uma panela, coloque um fio de óleo e refogue a cebola e o alho picado. // 2. Acrescente a carne e refogue até ela ficar bem cozida e dourada. // 3. Junte o molho, as azeitonas e tempere com sal. Deixe cozinhar por mais 5 minutos. // 4. Em seguida, coloque coloque as folhinhas de manjericão e desligue o fogo. // 5. Sirva com o macarrão cozido (conforme as instruções da embalagem), finalize com queijo ralado. // 6. Bom apetite!\",\r\n    \"topic\":{\r\n        \"idtopic\": 4\r\n    },\r\n    \"user\":{\r\n        \"iduser\":1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/posts",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Post 03",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2E5NTAxMzA6MTIzNDU2Nzg5",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idpost\": 3,\r\n    \"title\": \"Alimentação de Calopsitas e Periquitos\",\r\n    \"text\": \"Melhores marcas de ração, além de uma lista de verduras e frutas permitidas para complementar a alimentação das aves\",\r\n    \"topic\":{\r\n        \"idtopic\": 3\r\n    },\r\n    \"user\":{\r\n        \"iduser\":1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/posts",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Posts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2E5NTAxMzA6MTIzNDU2Nzg5",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/posts",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Id Post",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2E5NTAxMzA6MTIzNDU2Nzg5",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/posts/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Title Post",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2E5NTAxMzA6MTIzNDU2Nzg5",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/posts/title/calops",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts",
+								"title",
+								"calops"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Topics",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2E5NTAxMzA6MTIzNDU2Nzg5",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/topics",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"topics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users (Atualizado)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2E5NTAxMzA6MTIzNDU2Nzg5",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/users/all",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Post 03",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2E5NTAxMzA6MTIzNDU2Nzg5",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/posts/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Posts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2E5NTAxMzA6MTIzNDU2Nzg5",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/posts",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

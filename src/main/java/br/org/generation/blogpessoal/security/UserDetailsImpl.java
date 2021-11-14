@@ -1,4 +1,4 @@
-package br.org.generation.blogpessoal.seguranca;
+package br.org.generation.blogpessoal.security;
 
 import java.util.Collection;
 import java.util.List;
@@ -6,19 +6,19 @@ import java.util.List;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import br.org.generation.blogpessoal.model.Usuario;
+import br.org.generation.blogpessoal.model.User;
 
-public class UserDetailsImpl implements UserDetails{
+public class UserDetailsImpl implements UserDetails {
 	
 	private static final long serialVersionUID = 1L;
 
-	private String userName;
-	private String password;
+	private String usernameDet;
+	private String passwordDet;
 	private List<GrantedAuthority> authorities;
 
-	public UserDetailsImpl(Usuario user) {
-		this.userName = user.getUsuario();
-		this.password = user.getSenha();		
+	public UserDetailsImpl(User user) {
+		this.usernameDet = user.getUsername();
+		this.passwordDet = user.getPassword();		
 	}
 
 	public UserDetailsImpl() {}
@@ -30,13 +30,13 @@ public class UserDetailsImpl implements UserDetails{
 
 	@Override
 	public String getPassword() {
-		return password;
+		return passwordDet;
 	}
 
 	@Override
 	public String getUsername() {
 
-		return userName;
+		return usernameDet;
 	}
 
 	@Override
