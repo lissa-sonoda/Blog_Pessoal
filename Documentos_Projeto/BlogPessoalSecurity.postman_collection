@@ -497,7 +497,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"title\": \"Aprendendo o Spring\",\r\n    \"text\": \"Utilizando o SpringTool para fazer as atividades de Spring.\",\r\n    \"topic\":{\r\n        \"idtopic\": 2\r\n    },\r\n    \"user\":{\r\n        \"iduser\":1\r\n    }\r\n}",
+							"raw": "{\r\n    \"title\": \"Aprendendo o Spring\",\r\n    \"text\": \"Utilizando o SpringTool para fazer as atividades de Spring.\",\r\n    \"topic\":{\r\n        \"idtopic\": 2\r\n    },\r\n    \"username\":{\r\n        \"iduser\":1\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -530,7 +530,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"title\": \"Aprendendo o Portugol\",\r\n    \"text\": \"Utilizando o Portugol para fazer as atividades de lógica de programação.\",\r\n    \"topic\":{\r\n        \"idtopic\": 2\r\n    },\r\n    \"user\":{\r\n        \"iduser\":1\r\n    }\r\n}",
+							"raw": "{\r\n    \"title\": \"Aprendendo o Portugol\",\r\n    \"text\": \"Utilizando o Portugol para fazer as atividades de lógica de programação.\",\r\n    \"topic\":{\r\n        \"idtopic\": 2\r\n    },\r\n    \"username\":{\r\n        \"iduser\":1\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -563,7 +563,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"title\": \"Alimentação de Calopsitas\",\r\n    \"text\": \"Melhores marcas de ração, além de uma lista de verduras e frutas permitidas para complementar a alimentação das calopsitas\",\r\n    \"topic\":{\r\n        \"idtopic\": 3\r\n    },\r\n    \"user\":{\r\n        \"iduser\":1\r\n    }\r\n}",
+							"raw": "{\r\n    \"title\": \"Alimentação de Calopsitas\",\r\n    \"text\": \"Melhores marcas de ração, além de uma lista de verduras e frutas permitidas para complementar a alimentação das calopsitas\",\r\n    \"topic\":{\r\n        \"idtopic\": 3\r\n    },\r\n    \"username\":{\r\n        \"iduser\":1\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -596,7 +596,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"title\": \"Receita de Macarronada\",\r\n    \"text\": \"INGREDIENTES: Espaguete 1 pacote, Patinho 500 gramas, Molho de tomate 2 caixinhas, Alho 1 dente, Cebola 1 unidade, Azeitona verde 2 colheres (sopa), Manjericão 10 folhas, Óleo de soja a gosto, Queijo Ralado a gosto. COMO FAZER: 1. Em uma panela, coloque um fio de óleo e refogue a cebola e o alho picado. // 2. Acrescente a carne e refogue até ela ficar bem cozida e dourada. // 3. Junte o molho, as azeitonas e tempere com sal. Deixe cozinhar por mais 5 minutos. // 4. Em seguida, coloque coloque as folhinhas de manjericão e desligue o fogo. // 5. Sirva com o macarrão cozido (conforme as instruções da embalagem), finalize com queijo ralado. // 6. Bom apetite!\",\r\n    \"topic\":{\r\n        \"idtopic\": 4\r\n    },\r\n    \"user\":{\r\n        \"iduser\":1\r\n    }\r\n}",
+							"raw": "{\r\n    \"title\": \"Receita de Macarronada\",\r\n    \"text\": \"INGREDIENTES: Espaguete 1 pacote, Patinho 500 gramas, Molho de tomate 2 caixinhas, Alho 1 dente, Cebola 1 unidade, Azeitona verde 2 colheres (sopa), Manjericão 10 folhas, Óleo de soja a gosto, Queijo Ralado a gosto. COMO FAZER: 1. Em uma panela, coloque um fio de óleo e refogue a cebola e o alho picado. // 2. Acrescente a carne e refogue até ela ficar bem cozida e dourada. // 3. Junte o molho, as azeitonas e tempere com sal. Deixe cozinhar por mais 5 minutos. // 4. Em seguida, coloque coloque as folhinhas de manjericão e desligue o fogo. // 5. Sirva com o macarrão cozido (conforme as instruções da embalagem), finalize com queijo ralado. // 6. Bom apetite!\",\r\n    \"topic\":{\r\n        \"idtopic\": 4\r\n    },\r\n    \"username\":{\r\n        \"iduser\":1\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -629,7 +629,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"idpost\": 3,\r\n    \"title\": \"Alimentação de Calopsitas e Periquitos\",\r\n    \"text\": \"Melhores marcas de ração, além de uma lista de verduras e frutas permitidas para complementar a alimentação das aves\",\r\n    \"topic\":{\r\n        \"idtopic\": 3\r\n    },\r\n    \"user\":{\r\n        \"iduser\":1\r\n    }\r\n}",
+							"raw": "{\r\n    \"idpost\": 3,\r\n    \"title\": \"Alimentação de Calopsitas e Periquitos\",\r\n    \"text\": \"Melhores marcas de ração, além de uma lista de verduras e frutas permitidas para complementar a alimentação das aves\",\r\n    \"topic\":{\r\n        \"idtopic\": 3\r\n    },\r\n    \"username\":{\r\n        \"iduser\":1\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"

@@ -40,7 +40,7 @@ public class Post {
 	
 	@ManyToOne
 	@JsonIgnoreProperties("posts")
-	private User user;
+	private User username;
 
 	public long getIdpost() {
 		return idpost;
@@ -82,12 +82,12 @@ public class Post {
 		this.topic = topic;
 	}
 
-	public User getUser() {
-		return user;
+	public User getUsername() {
+		return username;
 	}
 
-	public void setUser(User user) {
-		this.user = user;
+	public void setUsername(User username) {
+		this.username = username;
 	}
 
 }

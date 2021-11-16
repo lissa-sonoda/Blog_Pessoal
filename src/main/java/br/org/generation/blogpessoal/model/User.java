@@ -35,8 +35,8 @@ public class User {
 	@Size(min = 8, message = "The password must contain at least 8 characters")
 	private String password;
 	
-	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-	@JsonIgnoreProperties("user")
+	@OneToMany(mappedBy = "username", cascade = CascadeType.ALL)
+	@JsonIgnoreProperties("username")
 	private List<Post> posts;
 	
 
