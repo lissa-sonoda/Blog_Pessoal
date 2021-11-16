@@ -774,7 +774,7 @@
 					"response": []
 				},
 				{
-					"name": "Delete Post 03",
+					"name": "Delete Post 02",
 					"request": {
 						"method": "DELETE",
 						"header": [
