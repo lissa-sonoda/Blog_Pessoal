@@ -9,11 +9,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import io.swagger.annotations.ApiModelProperty;
 
 @Entity
 @Table(name = "tb_user")
@@ -27,8 +30,9 @@ public class User {
 	@Size(min = 1, max = 200, message = "The name must contain between 1 and 200 characters")
 	private String name;
 	
+	@ApiModelProperty(example = "email@email.com.br")
 	@NotNull(message = "The username is required")
-	@Size(min = 3, max = 150, message = "The username must contain between 3 and 150 characters")
+	@Email(message = "The username must be a valid e-mail")
 	private String username;
 	
 	@NotNull(message = "The password is required")
