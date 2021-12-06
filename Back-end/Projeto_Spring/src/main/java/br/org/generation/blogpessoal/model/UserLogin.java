@@ -11,6 +11,10 @@ public class UserLogin {
 	private String passwordlog;
 	
 	private String token;
+	
+	private String picturelog;
+	
+	private String usertypelog;
 
 	public long getIdlog() {
 		return idlog;
@@ -50,6 +54,22 @@ public class UserLogin {
 
 	public void setToken(String token) {
 		this.token = token;
+	}
+
+	public String getPicturelog() {
+		return picturelog;
+	}
+
+	public void setPicturelog(String picturelog) {
+		this.picturelog = picturelog;
+	}
+
+	public String getUsertypelog() {
+		return usertypelog;
+	}
+
+	public void setUsertypelog(String usertypelog) {
+		this.usertypelog = usertypelog;
 	}
 
 }

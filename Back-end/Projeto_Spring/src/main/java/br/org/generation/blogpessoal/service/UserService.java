@@ -42,6 +42,8 @@ public class UserService {
 				userlog.get().setNamelog(user.get().getName());
 				userlog.get().setPasswordlog(user.get().getPassword());
 				userlog.get().setToken(token);
+				userlog.get().setPicturelog(user.get().getPicture());
+				userlog.get().setUsertypelog(user.get().getUsertype());
 
 				return userlog;
 			}
