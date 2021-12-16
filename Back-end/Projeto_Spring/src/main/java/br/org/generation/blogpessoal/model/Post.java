@@ -31,6 +31,8 @@ public class Post {
 	@Size(min = 10, max = 10000, message = "The text must contain between 10 and 10.000 characters")
 	private String text;
 	
+	private String image;
+	
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date datepost = new java.sql.Date(System.currentTimeMillis());
 	
@@ -64,6 +66,14 @@ public class Post {
 
 	public void setText(String text) {
 		this.text = text;
+	}
+
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
 	}
 
 	public Date getDatepost() {

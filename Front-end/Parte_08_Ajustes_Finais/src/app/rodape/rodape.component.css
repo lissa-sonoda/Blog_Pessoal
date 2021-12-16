@@ -1,0 +1,13 @@
+footer {
+  background-image: linear-gradient(60deg, #797474, #f2a4e9e7);
+}
+
+.fa {
+  font-size: 12pt;
+  color: black;
+  padding: 10px;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
